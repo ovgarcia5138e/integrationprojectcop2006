@@ -14,11 +14,11 @@ public class AdditionOverload {
    * @author oscargarcia
    *
    */
-  public int add(int a, int b, int c) {
+  public int add(int first, int second) {
 
-    int sum = a + b + c;
+    int sumOne = first + second;
 
-    return sum;
+    return sumOne;
   }
 
   /**
@@ -28,9 +28,9 @@ public class AdditionOverload {
    *
    */
 
-  public double add(double a, double b, double c) {
-    double sum = a + b + c;
-    return sum;
+  public double add(double secondDou, double firstDou) {
+    double sum = secondDou + firstDou;
+    return sumDou;
   }
 
   /**
@@ -45,11 +45,11 @@ public class AdditionOverload {
     public void main(String[] args) {
       AdditionOverload ob = new AdditionOverload();
 
-      int sum2 = ob.add(1, 2, 3);
-      System.out.println("The sum of the three integer values " + sum2 + "\n");
+      int sumSecond = ob.add(1, 2);
+      System.out.println("The sum of our two integer values " + sumSecond + "\n");
 
-      double sum3 = ob.add(1.0, 2.0, 3.0);
-      System.out.println("The sum of the three double values " + sum3 + "\n");
+      double sumThird = ob.add(1.0, 2.0);
+      System.out.println("The sum of our two double values " + sumThird + "\n");
 
     }
   }
