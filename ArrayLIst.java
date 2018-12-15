@@ -58,6 +58,11 @@ public class ArrayLIst {
     System.out.println("Above we will organize our array list using a 2d array format." + "\n");
 
   }
+  
+  /**
+   *
+   * Code sourced from https://stackoverflow.com/questions/37370132/locate-coordinates-of-element-in-2d-array
+   */
 
   public static void main1(String[] args) {
     locateStar(board);
