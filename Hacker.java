@@ -156,6 +156,11 @@ public class Hacker {
      * Integer array.
      * 
      */
+    
+    /**
+     * code sourced from https://stackoverflow.com/questions/4550662/how-do-you-find-the-sum-of-all-the-numbers-in-an-array-in-java
+     * 
+     */
 
     int[] a = {10, 20, 30, 40, 50};
 
@@ -197,6 +202,11 @@ public class Hacker {
     System.out.println("Below we will print an incrumented value of an int that starts at 10"
         + " This will be generated from a do while loop." + "\n");
     int x = 10;
+    
+    /**
+    * code sourced from https://www.tutorialspoint.com/java/java_do_while_loop.htm
+    *
+    */
 
     do {
 
