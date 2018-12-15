@@ -16,7 +16,12 @@ public class SmallestInArray {
    * 
    * @author oscargarcia
    */
-
+  
+  /**
+   * @param args code sourced from
+   *        https://www.javatpoint.com/java-program-to-find-smallest-number-in-an-array
+   */
+  
   public static int getSmallest(int[] a, int total) {
     int temp;
     for (int i = 0; i < total; i++) {
