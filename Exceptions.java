@@ -22,13 +22,13 @@ public class Exceptions {
 
 
     /**
-     * check is assigned with the false boolean.
+     * checkStatus is assigned with the false boolean.
      * 
      * @author oscargarcia
      *
      */
 
-    boolean check = false;
+    boolean checkStatus = false;
 
     /**
      * An array of strings
@@ -37,13 +37,13 @@ public class Exceptions {
      *
      */
 
-    String[] strings = {"A", "B", "C", "Q"};
+    String[] stringOptions = {"A", "B", "C", "Q"};
 
-    for (int i = 0; i < strings.length; i++) {
+    for (int i = 0; i < stringOptions.length; i++) {
 
       // checking whether the entered command is from expected charecters
 
-      if (strings[i].equals(command)) {
+      if (stringOptions[i].equals(command)) {
 
         /**
          * Condition where check is assigned a true boolean.
@@ -51,13 +51,13 @@ public class Exceptions {
          * @author oscargarcia
          *
          */
-        check = true;
+        checkStatus = true;
 
       }
 
     }
 
-    return check;
+    return checkStatus;
 
   }
 
@@ -114,19 +114,19 @@ public class Exceptions {
 
   public static void main(String[] args) {
 
-    Scanner sc = new Scanner(System.in);
+    Scanner exceptionScanner = new Scanner(System.in);
 
     /**
-     * Quit is assigned a false boolean.
+     * Stop is assigned a false boolean.
      * 
      * @author oscargarcia
      *
      */
 
-    boolean quit = false;
+    boolean stop = false;
 
     /**
-     * Integer assigned to 0.
+     * number assigned to 0.
      * 
      * @author oscargarcia
      *
@@ -143,9 +143,7 @@ public class Exceptions {
 
     int startingPosition = 0;
 
-    // this loop runs untill Q commond is given
-
-    // as we are setting quit = true in the loop if(command.equals("Q"))
+    
 
 
     /**
@@ -156,19 +154,19 @@ public class Exceptions {
      *
      */
 
-    while (quit == false) {
+    while (stop == false) {
 
-      boolean check = false;
+      boolean firstCheck = false;
 
-      boolean checkA = false;
+      boolean secondCheck = false;
 
-      boolean checkB = false;
+      boolean thirdCheck = false;
 
       System.out.println("Enter a command");
 
-      String command = sc.nextLine();
+      String command = exceptionScanner.nextLine();
 
-      // passing the entered string to checkcommand method to check valid string is entered
+      
 
       /**
        * passing the entered string to checkcommand method to check valid string is entered
@@ -176,19 +174,19 @@ public class Exceptions {
        * @author oscargarcia
        */
 
-      check = checkCommand(command);
+      firstCheck = checkCommand(command);
 
-      while (check == false) {
+      while (firstCheck == false) {
 
         System.out.println("Enter a valid Command");
 
-        command = sc.nextLine();
+        command = exceptionScanner.nextLine();
 
-        check = checkCommand(command);
+        firstCheck = checkCommand(command);
 
       }
 
-      // loop for the command A
+      
 
       /**
        * loop for the command A
@@ -199,13 +197,13 @@ public class Exceptions {
 
       if (command.equals("A")) {
 
-        while (checkA == false) {
+        while (secondCheck == false) {
 
           try {
 
             System.out.println("enter value for side A");
 
-            // If anything other than integers are given an exception is thrown
+            
 
             /**
              * If anything othe than integers are given an exception is thrown.
@@ -213,11 +211,11 @@ public class Exceptions {
              * @author oscargarcia
              */
 
-            number = Integer.parseInt(sc.nextLine());
+            number = Integer.parseInt(exceptionScanner.nextLine());
 
             System.out.println(number + "A");
 
-            checkA = true;
+            secondCheck = true;
 
           } catch (Exception e) {
 
@@ -229,7 +227,7 @@ public class Exceptions {
 
       }
 
-      // loop for the command B
+      
 
       /**
        * Loop for the command B
@@ -239,7 +237,7 @@ public class Exceptions {
 
       if (command.equals("B")) {
 
-        while (checkB == false) {
+        while (thirdCheck == false) {
 
           try {
 
@@ -247,9 +245,9 @@ public class Exceptions {
 
             // If anything other than integers are given an exception is thrown
 
-            startingPosition = Integer.parseInt(sc.nextLine());
+            startingPosition = Integer.parseInt(exceptionScanner.nextLine());
 
-            checkB = true;
+            thirdCheck = true;
 
           } catch (Exception e) {
 
@@ -263,7 +261,7 @@ public class Exceptions {
 
       if (command.equals("C")) {
 
-        // passing A and B to get hypotenuse value
+        
 
         /**
          * Passing A and B to get hypotenuse value.
@@ -271,11 +269,11 @@ public class Exceptions {
          * @author oscargarcia
          */
 
-        double hypo = hypotenuse(number, startingPosition);
+        double numberHypo = hypotenuse(number, startingPosition);
 
-        System.out.println("Hypotenuse : " + hypo);
+        System.out.println("Hypotenuse : " + numberHypo);
 
-        // setting A and B as 0 since they hold the previous loop values inside them
+        
 
         /**
          * Setting A and B as 0 since they hold the pervious loop values inside them.
@@ -291,12 +289,12 @@ public class Exceptions {
 
       if (command.equals("Q")) {
 
-        quit = true;
+        stop = true;
 
-        System.out.println("Exit successful");
+        System.out.println("Exit was successful");
 
       }
-      sc.close();
+      exceptionScanner.close();
     }
 
   }
