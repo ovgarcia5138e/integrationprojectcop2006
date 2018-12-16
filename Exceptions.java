@@ -10,6 +10,10 @@ import java.util.Scanner;
  *
  */
 
+// Source cited from www.Stackoverflow.com
+
+
+
 public class Exceptions {
 
   // method to check wHether a valid command is entered
